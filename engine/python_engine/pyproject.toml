@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aster-aia-engine"
+version = "0.1.0"
+description = "Independent AIA M30, daily-shape and Top10 task runner"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+aster-top10 = "aia_engine.aster_top10:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["aia_engine*"]

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>宿主网站嵌入预览</title>
+  <style>
+    body{margin:0;padding:28px;background:#e9eef2;font-family:"Microsoft YaHei",sans-serif}
+    .host-shell{max-width:1540px;margin:auto}
+    .host-label{margin:0 0 12px;color:#657383;font-size:12px}
+    iframe{display:block;width:100%;height:1100px;border:0;background:#f4f7f8}
+    @media(max-width:600px){body{padding:0}.host-label{display:none}}
+  </style>
+</head>
+<body>
+  <div class="host-shell">
+    <p class="host-label">宿主网站容器预览 · 下方模块通过 iframe 隔离接入</p>
+    <iframe id="expertTrackerFrame" title="高手持仓共识与选手策略风格" src="./"></iframe>
+  </div>
+  <script>
+    const frame = document.getElementById("expertTrackerFrame");
+    const expectedOrigin = new URL(frame.src, location.href).origin;
+    addEventListener("message", (event) => {
+      if (event.origin !== expectedOrigin || event.source !== frame.contentWindow) return;
+      if (event.data?.type !== "expert-tracker:resize") return;
+      frame.style.height = `${Math.max(700, Math.min(6000, Number(event.data.height) || 0))}px`;
+    });
+  </script>
+</body>
+</html>

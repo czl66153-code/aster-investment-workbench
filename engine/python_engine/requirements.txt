@@ -1,0 +1,2 @@
+# Runtime is standard-library only. Provider SDKs belong to the external fetch
+# workers so this engine can be tested without credentials or network access.

@@ -1,0 +1,3 @@
+# Project-local runtime dependencies used by migrated evidence collectors.
+# Install into D:\UnifiedResearchWorkbench\python_packages, not into a legacy site.
+jieba==0.42.1

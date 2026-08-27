@@ -1,0 +1,81 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/.vinext/
+/out/
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (only the placeholder template may be committed)
+.env*
+!.env.example
+
+# vercel
+.vercel
+
+/dist/
+/.wrangler/
+/outputs/
+/work/
+
+# bundled upstream runtimes and real collected datasets are not part of the portfolio release
+/python_engine/vendor_exact/
+/python_engine/vendor8002/
+/web/expert-tracker/data/
+
+# local runtime data and backups
+/data/
+/backups/
+/python_packages/
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.duckdb
+*.parquet
+*.log
+
+# private model artifacts and local credentials
+*.joblib
+*.pkl
+*.pickle
+*.onnx
+*.pt
+*.pth
+*.h5
+*.key
+*.p12
+*.pfx
+
+# Python-generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# temporary editor/runtime copies
+*.bak
+*.bak-*
+*.partial
+*.tmp

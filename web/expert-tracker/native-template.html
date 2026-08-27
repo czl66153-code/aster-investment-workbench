@@ -1,0 +1,61 @@
+<main class="tracker-embed" data-expert-tracker-root>
+  <header class="module-intro">
+    <div>
+      <span class="kicker">EXPERT POSITION INTELLIGENCE</span>
+      <h1>高手持仓共识</h1>
+      <p>聚合顽主杯、复利笔记与雪球公开组合；选手档案仅保留具有交易明细的对象。</p>
+    </div>
+    <div class="asof"><span>数据截至</span><strong id="asOfDate">—</strong><small id="coverageText">正在载入</small></div>
+  </header>
+
+  <section class="module-card ranking-module" aria-labelledby="rankingTitle">
+    <div class="module-head">
+      <div><span class="section-code">POSITION RANKING</span><h2 id="rankingTitle">持仓排行</h2></div>
+      <div class="rank-tabs" role="tablist" aria-label="排行口径">
+        <button class="rank-tab is-active" data-ranking="consensus" role="tab" type="button">多平台共识</button>
+        <button class="rank-tab" data-ranking="顽主杯" role="tab" type="button">顽主杯</button>
+        <button class="rank-tab" data-ranking="复利笔记" role="tab" type="button">复利笔记</button>
+        <button class="rank-tab" data-ranking="雪球" role="tab" type="button">雪球</button>
+      </div>
+    </div>
+    <div class="rank-summary" id="rankSummary"></div>
+    <div class="rank-table-wrap">
+      <div class="rank-table-head"><span>排名 / 股票</span><span>覆盖平台</span><span>持有人</span><span>披露敞口</span><span>代表持有人</span></div>
+      <div id="rankingRows" class="rank-table-body"></div>
+    </div>
+    <p class="data-boundary" id="rankingBoundary"></p>
+  </section>
+
+  <section class="module-card forecast-module" aria-labelledby="forecastTitle" hidden aria-hidden="true">
+    <div class="module-head forecast-module-head">
+      <div><span class="section-code">CONTINUOUS NEXT-DAY FORECAST</span><h2 id="forecastTitle">次日持仓持续预测</h2></div>
+      <div class="forecast-status" id="forecastStatus">正在读取预测账本</div>
+    </div>
+    <div class="forecast-summary" id="forecastSummary"></div>
+    <div class="forecast-layout">
+      <div class="forecast-main">
+        <div class="forecast-table-head"><span>选手 / 近期基线与盲测</span><span>次日概率 Top5</span><span>数据状态</span></div>
+        <div id="forecastRows" class="forecast-rows"></div>
+      </div>
+      <aside class="participant-watch">
+        <header><span>ROSTER EVOLUTION</span><h3>新人观察与名单迭代</h3></header>
+        <div id="participantWatchlist"></div>
+      </aside>
+    </div>
+    <p class="data-boundary" id="forecastBoundary">预测生成后不可覆盖；缺失持仓不会当成空仓。仅供模型验证，不构成投资建议。</p>
+  </section>
+
+  <section class="module-card expert-module" aria-labelledby="expertTitle">
+    <div class="module-head expert-module-head">
+      <div><span class="section-code">PLAYER RETURN BOARD</span><h2 id="expertTitle">选手收益榜</h2></div>
+      <label class="expert-search"><span>⌕</span><input id="expertSearch" type="search" placeholder="搜索选手、组合或风格" aria-label="搜索选手、组合或风格"></label>
+    </div>
+    <div class="expert-layout">
+      <aside class="expert-rail">
+        <div class="source-filters" id="sourceFilters" role="group" aria-label="选手来源"></div>
+        <div class="expert-list" id="expertList" role="listbox" aria-label="选手列表"></div>
+      </aside>
+      <article class="expert-dossier" id="expertDossier" hidden></article>
+    </div>
+  </section>
+</main>

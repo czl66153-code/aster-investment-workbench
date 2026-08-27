@@ -1,0 +1,46 @@
+{
+  "manifest_version": "aia-independent-assets.v1",
+  "runtime_root": "independent-research-platform/engine",
+  "source_commit": "ac96bf427e5479490437732c6af3c735bd7230e5",
+  "license_status": "legacy_project_has_no_declared_license_or_remote; use is limited to this local owner migration",
+  "secrets_policy": {
+    "copied": false,
+    "allowed_environment_names": [
+      "BIGQUANT_USERNAME",
+      "BIGQUANT_PASSWORD",
+      "BIGQUANT_TOKEN",
+      "TUSHARE_TOKEN"
+    ],
+    "note": "Credentials are supplied by the deployment environment and never stored in this manifest or copied from the legacy site."
+  },
+  "assets": [
+    {
+      "id": "ranking_config_versions",
+      "path": "../models/aia/ranking-config-versions.json",
+      "required": true,
+      "sha256": "ec6fd4f5beefd9ca8f741ff245c5e8d886b4306e47fcc7fb6e9bfebf15fe9bf3",
+      "purpose": "Top10 weight and version audit"
+    },
+    {
+      "id": "m30_template_profile",
+      "path": "../models/aia/tmpl-m30-197f6460.json",
+      "required": true,
+      "sha256": "a123806acac358ef4d04e342c5554f449dadf1db9a1f7a5f82d6edf7364ab438",
+      "purpose": "M30 64-point similarity calibration"
+    },
+    {
+      "id": "m30_template_image",
+      "path": "../models/aia/tmpl-m30-197f6460.png",
+      "required": false,
+      "sha256": "a81c6470f7b71f8496236f98b0929961e3b713a5ee458ff6ae7f3ee3e2b13039",
+      "purpose": "Template management preview only; never used as a runtime file locator"
+    },
+    {
+      "id": "trade_calendar",
+      "path": "../models/aia/trade_calendar.json",
+      "required": false,
+      "sha256": "f22f036fa324fb4d6945e3948e78c470d0d0b8622087ee78339aeb872c785e94",
+      "purpose": "Night job/session-day guard"
+    }
+  ]
+}

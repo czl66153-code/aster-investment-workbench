@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>原生功能接入预览</title>
+  <style>
+    body{margin:0;background:#e9eef2;font-family:Arial,sans-serif}
+    .host-nav{padding:14px 24px;color:white;background:#5032a0;font-weight:700}
+    .host-content{max-width:1540px;margin:auto;padding:24px}
+    button{font-size:28px;background:#ff00aa;color:#00ff00}
+    .module-card{border:8px dashed orange}
+    @media(max-width:600px){.host-content{padding:0}.host-nav{display:none}}
+  </style>
+</head>
+<body>
+  <nav class="host-nav">宿主网站导航（故意加载冲突样式进行隔离测试）</nav>
+  <div class="host-content"><div id="expertTrackerFeature"></div></div>
+  <script type="module">
+    import { mountExpertTracker } from "./native-entry.js";
+    window.trackerFeature = await mountExpertTracker(document.getElementById("expertTrackerFeature"));
+  </script>
+</body>
+</html>

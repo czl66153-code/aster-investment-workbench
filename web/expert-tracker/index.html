@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>高手持仓共识模块</title>
+  <meta name="description" content="多平台高手持仓共识排行、分平台持仓排行与选手策略风格档案。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314263b'/%3E%3Cpath d='M7 23h4V13H7zm7 0h4V7h-4zm7 0h4V10h-4z' fill='%2369c7c1'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./embed.css">
+</head>
+<body>
+  <main class="tracker-embed" id="expertTracker">
+    <header class="module-intro">
+      <div>
+        <span class="kicker">EXPERT POSITION INTELLIGENCE</span>
+        <h1>高手持仓共识</h1>
+        <p>聚合顽主杯、复利笔记与雪球公开组合；选手档案仅保留具有交易明细的对象。</p>
+      </div>
+      <div class="asof"><span>数据截至</span><strong id="asOfDate">—</strong><small id="coverageText">正在载入</small></div>
+    </header>
+
+    <section class="module-card ranking-module" aria-labelledby="rankingTitle">
+      <div class="module-head">
+        <div><span class="section-code">POSITION RANKING</span><h2 id="rankingTitle">持仓排行</h2></div>
+        <div class="rank-tabs" role="tablist" aria-label="排行口径">
+          <button class="rank-tab is-active" data-ranking="consensus" role="tab" type="button">多平台共识</button>
+          <button class="rank-tab" data-ranking="顽主杯" role="tab" type="button">顽主杯</button>
+          <button class="rank-tab" data-ranking="复利笔记" role="tab" type="button">复利笔记</button>
+          <button class="rank-tab" data-ranking="雪球" role="tab" type="button">雪球</button>
+        </div>
+      </div>
+      <div class="rank-summary" id="rankSummary"></div>
+      <div class="rank-table-wrap">
+        <div class="rank-table-head"><span>排名 / 股票</span><span>覆盖平台</span><span>持有人</span><span>披露敞口</span><span>代表持有人</span></div>
+        <div id="rankingRows" class="rank-table-body"></div>
+      </div>
+      <p class="data-boundary" id="rankingBoundary"></p>
+    </section>
+
+    <section class="module-card expert-module" aria-labelledby="expertTitle">
+      <div class="module-head expert-module-head">
+        <div><span class="section-code">PLAYER &amp; STRATEGY</span><h2 id="expertTitle">选手与策略风格</h2></div>
+        <label class="expert-search"><span>⌕</span><input id="expertSearch" type="search" placeholder="搜索选手、组合或风格" aria-label="搜索选手、组合或风格"></label>
+      </div>
+      <div class="expert-layout">
+        <aside class="expert-rail">
+          <div class="source-filters" id="sourceFilters" role="group" aria-label="选手来源"></div>
+          <div class="expert-list" id="expertList" role="listbox" aria-label="选手列表"></div>
+        </aside>
+        <article class="expert-dossier" id="expertDossier"></article>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="./embed.js"></script>
+  <script src="./iframe-bridge.js" defer></script>
+</body>
+</html>

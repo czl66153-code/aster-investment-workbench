@@ -1,0 +1,23 @@
+{
+  "mustTrack": [
+    {
+      "displayName": "乌江望月",
+      "sources": ["顽主杯", "复利笔记"],
+      "identityStatus": "同名跨平台未核验",
+      "priority": "核心"
+    }
+  ],
+  "tgbUsers": [
+    { "userId": "13145799", "displayName": "橘子洲炒家实战" },
+    { "userId": "13378280", "displayName": "情绪定成胜" },
+    { "userId": "6440493", "displayName": "复盘实录" },
+    { "userId": "2101931", "displayName": "北京炒家" },
+    { "userId": "1116585", "displayName": "涅盘重升" },
+    { "userId": "134434", "displayName": "炒股养家" }
+  ],
+  "policy": {
+    "mergePeopleAcrossSourcesOnlyWhenVerified": true,
+    "treatArticleMentionAsHolding": false,
+    "preserveEvidenceUrl": true
+  }
+}

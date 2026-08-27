@@ -1,0 +1,64 @@
+{
+  "name": "aster-independent-research-platform",
+  "version": "0.1.0",
+  "private": true,
+  "bin": {
+    "aster-top10": "engine/python_engine/aster-top10.mjs"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "vinext dev",
+    "build": "vinext build",
+    "start": "vinext start",
+    "engine": "node engine/server.mjs",
+    "bootstrap": "node engine/bootstrap.mjs",
+    "verify:engine": "node --test tests/engine-api.test.mjs",
+    "verify:aia-python": "node engine/python_engine/verify.mjs",
+    "aia:top10": "node engine/python_engine/aster-top10.mjs",
+    "verify:providers": "node --test tests/market-provider-bridge.test.mjs",
+    "verify:forward": "node --test tests/forward-test.test.mjs",
+    "verify:platforms": "node --test tests/five-platform.test.mjs",
+    "verify:preopen": "node --test tests/preopen.test.mjs",
+    "verify:expert": "node --test tests/expert-tracker.test.mjs",
+    "verify:expert-shadow": "node --test tests/expert-next-holding-shadow.test.mjs",
+    "test": "npm run build && npm run test:portfolio",
+    "test:portfolio": "node --test tests/aia-authoritative.test.mjs tests/chip-experimental.test.mjs tests/community-topics.test.mjs tests/five-platform.test.mjs tests/forward-test.test.mjs tests/preopen.test.mjs tests/scheduled-screener.test.mjs tests/sector-stock-rank.test.mjs",
+    "test:full": "npm run build && node --test tests/rendered-html.test.mjs tests/aia-authoritative.test.mjs tests/engine-api.test.mjs tests/market-provider-bridge.test.mjs tests/forward-test.test.mjs tests/five-platform.test.mjs tests/preopen.test.mjs tests/community-topics.test.mjs tests/sector-stock-rank.test.mjs tests/expert-tracker.test.mjs tests/expert-next-holding-shadow.test.mjs tests/scheduled-screener.test.mjs tests/chip-experimental.test.mjs",
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "db:generate": "drizzle-kit generate"
+  },
+  "dependencies": {
+    "drizzle-orm": "0.45.2",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "redis": "^6.2.1"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.37.1",
+    "@eslint/js": "9.39.4",
+    "@next/eslint-plugin-next": "16.2.6",
+    "@openai/sites-vite-plugin": "0.1.0",
+    "@tailwindcss/postcss": "4.2.1",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "@vitejs/plugin-rsc": "0.5.26",
+    "drizzle-kit": "0.31.10",
+    "eslint": "9.39.4",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "globals": "16.4.0",
+    "react-server-dom-webpack": "19.2.6",
+    "tailwindcss": "4.2.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.59.3",
+    "vinext": "1.0.0-beta.2",
+    "vite": "8.0.13",
+    "wrangler": "4.92.0"
+  },
+  "type": "module"
+}
