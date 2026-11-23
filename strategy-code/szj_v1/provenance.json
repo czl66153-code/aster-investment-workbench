@@ -1,0 +1,18 @@
+{
+  "source_module": "szj_trade_management.py",
+  "snapshot_date": "2026-09-23",
+  "source_sha256": "570a93fc0766d05a62717d3cbdad2056633971146f073602ae942d4f732cd8c0",
+  "source_logic": [
+    "Policy",
+    "first_overlay: loss_trail branch"
+  ],
+  "public_component": "szj_overlay.first_exit_signal",
+  "adaptations": [
+    "Extract combined loss/trailing policy",
+    "Validate typed input",
+    "Use direct inclusive price-level comparisons",
+    "Synthetic data only"
+  ],
+  "data_included": "synthetic",
+  "historical_backtest_included": false
+}
