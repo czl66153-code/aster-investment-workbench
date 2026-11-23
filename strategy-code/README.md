@@ -1,5 +1,7 @@
 # Quantitative Research Portfolio
 
+[在线阅读量化研究作品集（PDF）](portfolio.pdf)
+
 量化研究作品集的配套代码。两个样例使用合成输入，在本地运行，可直接查看策略规则和关键边界的实现。
 
 | 研究项目 | 可运行代码 |
@@ -9,7 +11,7 @@
 
 ## 快速运行
 
-使用 Python 3.11 或以上版本，在仓库根目录运行。
+使用 Python 3.11 或以上版本，进入本页所在的 `strategy-code` 目录后运行。
 
 ```sh
 python -m pip install -r abcd_core_v3/requirements.txt
